@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-| Date         : Thu Jul 18 20:23:54 2024
+| Date         : Thu Jul 18 22:45:54 2024
 | Host         : asanka-Nitro-AN515-52 running 64-bit Ubuntu 24.04 LTS
 | Command      : report_methodology -file motor_controller_methodology_drc_routed.rpt -pb motor_controller_methodology_drc_routed.pb -rpx motor_controller_methodology_drc_routed.rpx
 | Design       : motor_controller
@@ -23,12 +23,12 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 24
+             Violations found: 26
 +-----------+------------------+-------------------------------+------------+
 | Rule      | Severity         | Description                   | Violations |
 +-----------+------------------+-------------------------------+------------+
 | TIMING-17 | Critical Warning | Non-clocked sequential cell   | 22         |
-| TIMING-18 | Warning          | Missing input or output delay | 2          |
+| TIMING-18 | Warning          | Missing input or output delay | 4          |
 +-----------+------------------+-------------------------------+------------+
 
 2. REPORT DETAILS
@@ -145,10 +145,20 @@ Related violations: <none>
 
 TIMING-18#1 Warning
 Missing input or output delay  
-An output delay is missing on drive_step relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+An input delay is missing on panic_btn relative to the rising and/or falling clock edge(s) of sys_clk_pin.
 Related violations: <none>
 
 TIMING-18#2 Warning
+Missing input or output delay  
+An output delay is missing on drive_step relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An output delay is missing on motor_red_LED relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+Related violations: <none>
+
+TIMING-18#4 Warning
 Missing input or output delay  
 An output delay is missing on red_LED relative to the rising and/or falling clock edge(s) of sys_clk_pin.
 Related violations: <none>

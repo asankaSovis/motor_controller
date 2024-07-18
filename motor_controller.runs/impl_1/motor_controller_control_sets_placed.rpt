@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-| Date         : Thu Jul 18 20:23:40 2024
+| Date         : Thu Jul 18 22:45:44 2024
 | Host         : asanka-Nitro-AN515-52 running 64-bit Ubuntu 24.04 LTS
 | Command      : report_control_sets -verbose -file motor_controller_control_sets_placed.rpt
 | Design       : motor_controller
@@ -27,7 +27,7 @@ Table of Contents
 |    Minimum number of control sets                        |     9 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    42 |
+| Unused register locations in slices containing registers |    44 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -60,7 +60,7 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |               9 |            5 |
 | No           | No                    | Yes                    |               2 |            2 |
-| No           | Yes                   | No                     |              51 |           13 |
+| No           | Yes                   | No                     |              57 |           16 |
 | Yes          | No                    | No                     |               8 |            3 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               0 |            0 |
@@ -73,14 +73,14 @@ Table of Contents
 +-------------------------+----------------------+-------------------------------------+------------------+----------------+--------------+
 |       Clock Signal      |     Enable Signal    |           Set/Reset Signal          | Slice Load Count | Bel Load Count | Bels / Slice |
 +-------------------------+----------------------+-------------------------------------+------------------+----------------+--------------+
-| ~din_IBUF_BUFG          |                      | module2/module2/Q[0]                |                1 |              1 |         1.00 |
 |  int_clk_IBUF_BUFG      |                      |                                     |                1 |              1 |         1.00 |
 |  module2/module1/CLK    |                      |                                     |                1 |              1 |         1.00 |
+| ~din_IBUF_BUFG          |                      | module2/module2/Q[0]                |                1 |              1 |         1.00 |
 | ~module2/module2/enable |                      | module2/module4/trigger             |                1 |              1 |         1.00 |
-|  module2/module1/CLK    |                      | module2/module2/E[0]                |                1 |              4 |         4.00 |
+|  module2/module1/CLK    |                      | module2/module2/E[0]                |                2 |              4 |         2.00 |
 | ~module2/module1/CLK    |                      |                                     |                3 |              7 |         2.33 |
 | ~module2/module1/CLK    | module2/module2/E[0] |                                     |                3 |              8 |         2.67 |
-|  int_clk_IBUF_BUFG      |                      | module1/p_1_in                      |                6 |             20 |         3.33 |
+|  int_clk_IBUF_BUFG      |                      | module1/p_1_in                      |                8 |             26 |         3.25 |
 |  int_clk_IBUF_BUFG      |                      | module2/module1/counter[25]_i_1_n_0 |                6 |             27 |         4.50 |
 +-------------------------+----------------------+-------------------------------------+------------------+----------------+--------------+
 

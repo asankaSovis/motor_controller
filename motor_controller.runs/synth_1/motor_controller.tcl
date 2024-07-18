@@ -57,6 +57,8 @@ if {$::dispatch::connected} {
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param checkpoint.writeSynthRtdsInDcp 1
+set_param chipscope.maxJobs 2
+set_param xicom.use_bs_reader 1
 set_param synth.incrementalSynthesisCache ./.Xil/Vivado-4883-asanka-Nitro-AN515-52/incrSyn
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
@@ -79,6 +81,8 @@ OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
   /home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/sources_1/imports/new/UART_Reciever.v
   /home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/sources_1/imports/new/indicator.v
+  /home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/sources_1/new/protection_module.v
+  /home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/sources_1/new/status_indicator.v
   /home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/sources_1/new/motor_controller.v
 }
 OPTRACE "Adding files" END { }
