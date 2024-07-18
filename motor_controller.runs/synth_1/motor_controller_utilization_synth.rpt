@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-| Date         : Thu Jul 18 05:44:18 2024
+| Date         : Thu Jul 18 20:22:44 2024
 | Host         : asanka-Nitro-AN515-52 running 64-bit Ubuntu 24.04 LTS
 | Command      : report_utilization -file motor_controller_utilization_synth.rpt -pb motor_controller_utilization_synth.pb
 | Design       : motor_controller

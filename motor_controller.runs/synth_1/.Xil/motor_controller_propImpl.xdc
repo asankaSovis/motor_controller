@@ -1,8 +1,6 @@
 set_property SRC_FILE_INFO {cfile:/home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/constrs_1/imports/Downloads/pins.xdc rfile:../../../motor_controller.srcs/constrs_1/imports/Downloads/pins.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN H16   IOSTANDARD LVCMOS33 } [get_ports { int_clk }]; #IO_L13P_T2_MRCC_35 Sch=sysclk
-set_property src_info {type:XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]
-create_clock -add -name sys_clk_pin -period 1.00 -waveform {0 4} [get_ports { int_clk }];#set
 set_property src_info {type:XDC file:1 line:12 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN G17   IOSTANDARD LVCMOS33 } [get_ports { green_LED }]; #IO_L16P_T2_35 Sch=led0_g
 set_property src_info {type:XDC file:1 line:13 export:INPUT save:INPUT read:READ} [current_design]
