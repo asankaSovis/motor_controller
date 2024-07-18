@@ -7,12 +7,12 @@
   **** SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
   **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Sun Jul 14 21:01:42 2024
+  **** Start of session at: Thu Jul 18 05:43:37 2024
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source motor_controller.tcl -notrace
-create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1417.352 ; gain = 0.027 ; free physical = 1699 ; free virtual = 3391
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1415.355 ; gain = 0.027 ; free physical = 567 ; free virtual = 7357
 Command: read_checkpoint -auto_incremental -incremental /home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/utils_1/imports/synth_1/motor_controller.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from /home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/utils_1/imports/synth_1/motor_controller.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -26,74 +26,100 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 72582
+INFO: [Synth 8-7075] Helper process launched with PID 10649
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2133.340 ; gain = 411.715 ; free physical = 607 ; free virtual = 2299
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2136.281 ; gain = 414.652 ; free physical = 245 ; free virtual = 6329
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'motor_controller' [/home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/sources_1/new/motor_controller.v:23]
-INFO: [Synth 8-6157] synthesizing module 'drive_clock' [/home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/sources_1/new/motor_controller.v:47]
-INFO: [Synth 8-6155] done synthesizing module 'drive_clock' (0#1) [/home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/sources_1/new/motor_controller.v:47]
-INFO: [Synth 8-6155] done synthesizing module 'motor_controller' (0#1) [/home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/sources_1/new/motor_controller.v:23]
+INFO: [Synth 8-11241] undeclared symbol 'recieving', assumed default net type 'wire' [/home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/sources_1/new/motor_controller.v:40]
+INFO: [Synth 8-6157] synthesizing module 'motor_controller' [/home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/sources_1/new/motor_controller.v:22]
+INFO: [Synth 8-6157] synthesizing module 'drive_clock' [/home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/sources_1/new/motor_controller.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'drive_clock' (0#1) [/home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/sources_1/new/motor_controller.v:48]
+INFO: [Synth 8-6157] synthesizing module 'UART_Reciever' [/home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/sources_1/imports/new/UART_Reciever.v:1]
+INFO: [Synth 8-6157] synthesizing module 'rx_clock' [/home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/sources_1/imports/new/UART_Reciever.v:127]
+INFO: [Synth 8-6155] done synthesizing module 'rx_clock' (0#1) [/home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/sources_1/imports/new/UART_Reciever.v:127]
+INFO: [Synth 8-6157] synthesizing module 'bit_counter_rx' [/home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/sources_1/imports/new/UART_Reciever.v:103]
+INFO: [Synth 8-6155] done synthesizing module 'bit_counter_rx' (0#1) [/home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/sources_1/imports/new/UART_Reciever.v:103]
+INFO: [Synth 8-6157] synthesizing module 'reciever' [/home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/sources_1/imports/new/UART_Reciever.v:78]
+INFO: [Synth 8-6155] done synthesizing module 'reciever' (0#1) [/home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/sources_1/imports/new/UART_Reciever.v:78]
+INFO: [Synth 8-6157] synthesizing module 'data_trigger' [/home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/sources_1/imports/new/UART_Reciever.v:160]
+INFO: [Synth 8-6155] done synthesizing module 'data_trigger' (0#1) [/home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/sources_1/imports/new/UART_Reciever.v:160]
+INFO: [Synth 8-6157] synthesizing module 'recieve_trigger' [/home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/sources_1/imports/new/UART_Reciever.v:42]
+INFO: [Synth 8-6155] done synthesizing module 'recieve_trigger' (0#1) [/home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/sources_1/imports/new/UART_Reciever.v:42]
+INFO: [Synth 8-6157] synthesizing module 'indicator' [/home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/sources_1/imports/new/indicator.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'indicator' (0#1) [/home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/sources_1/imports/new/indicator.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'UART_Reciever' (0#1) [/home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/sources_1/imports/new/UART_Reciever.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'motor_controller' (0#1) [/home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/sources_1/new/motor_controller.v:22]
 WARNING: [Synth 8-3917] design motor_controller has port drive_en driven by constant 0
-WARNING: [Synth 8-3917] design motor_controller has port drive_dir driven by constant 0
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2209.309 ; gain = 487.684 ; free physical = 524 ; free virtual = 2217
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2210.250 ; gain = 488.621 ; free physical = 138 ; free virtual = 6225
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2224.152 ; gain = 502.527 ; free physical = 522 ; free virtual = 2215
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2225.094 ; gain = 503.465 ; free physical = 138 ; free virtual = 6224
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2224.152 ; gain = 502.527 ; free physical = 522 ; free virtual = 2215
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2225.094 ; gain = 503.465 ; free physical = 138 ; free virtual = 6224
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2224.152 ; gain = 0.000 ; free physical = 522 ; free virtual = 2215
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2225.094 ; gain = 0.000 ; free physical = 138 ; free virtual = 6224
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [/home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/constrs_1/imports/Downloads/pins.xdc]
+CRITICAL WARNING: [Constraints 18-948] create_clock: can't define clock 'sys_clk_pin' with period '1' which is less than or equal to the delta '4' between waveform edges (0,4) [/home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/constrs_1/imports/Downloads/pins.xdc:8]
 Finished Parsing XDC File [/home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/constrs_1/imports/Downloads/pins.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/constrs_1/imports/Downloads/pins.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/motor_controller_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/motor_controller_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2341.902 ; gain = 0.000 ; free physical = 515 ; free virtual = 2208
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2364.844 ; gain = 0.000 ; free physical = 261 ; free virtual = 6232
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2341.902 ; gain = 0.000 ; free physical = 515 ; free virtual = 2208
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2364.844 ; gain = 0.000 ; free physical = 261 ; free virtual = 6232
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2341.902 ; gain = 620.277 ; free physical = 529 ; free virtual = 2222
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2364.844 ; gain = 643.215 ; free physical = 270 ; free virtual = 6153
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z007sclg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2349.906 ; gain = 628.281 ; free physical = 529 ; free virtual = 2222
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2372.848 ; gain = 651.219 ; free physical = 270 ; free virtual = 6153
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2349.906 ; gain = 628.281 ; free physical = 529 ; free virtual = 2222
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2372.848 ; gain = 651.219 ; free physical = 255 ; free virtual = 6137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2349.906 ; gain = 628.281 ; free physical = 531 ; free virtual = 2225
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2372.848 ; gain = 651.219 ; free physical = 245 ; free virtual = 6130
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
+	   2 Input   26 Bit       Adders := 1     
 	   2 Input   20 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 1     
 +---Registers : 
+	               26 Bit    Registers := 1     
 	               20 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input   20 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -111,27 +137,26 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 WARNING: [Synth 8-3917] design motor_controller has port drive_en driven by constant 0
-WARNING: [Synth 8-3917] design motor_controller has port drive_dir driven by constant 0
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2349.906 ; gain = 628.281 ; free physical = 518 ; free virtual = 2216
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2372.848 ; gain = 651.219 ; free physical = 288 ; free virtual = 6179
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2349.906 ; gain = 628.281 ; free physical = 512 ; free virtual = 2210
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2372.848 ; gain = 651.219 ; free physical = 321 ; free virtual = 6229
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2349.906 ; gain = 628.281 ; free physical = 512 ; free virtual = 2210
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2372.848 ; gain = 651.219 ; free physical = 321 ; free virtual = 6229
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2349.906 ; gain = 628.281 ; free physical = 512 ; free virtual = 2210
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2372.848 ; gain = 651.219 ; free physical = 329 ; free virtual = 6237
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -149,37 +174,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2349.906 ; gain = 628.281 ; free physical = 526 ; free virtual = 2224
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2372.848 ; gain = 651.219 ; free physical = 313 ; free virtual = 6221
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2349.906 ; gain = 628.281 ; free physical = 526 ; free virtual = 2224
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2372.848 ; gain = 651.219 ; free physical = 313 ; free virtual = 6221
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2349.906 ; gain = 628.281 ; free physical = 526 ; free virtual = 2224
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2372.848 ; gain = 651.219 ; free physical = 313 ; free virtual = 6221
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2349.906 ; gain = 628.281 ; free physical = 526 ; free virtual = 2224
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2372.848 ; gain = 651.219 ; free physical = 313 ; free virtual = 6221
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2349.906 ; gain = 628.281 ; free physical = 526 ; free virtual = 2224
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2372.848 ; gain = 651.219 ; free physical = 313 ; free virtual = 6221
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2349.906 ; gain = 628.281 ; free physical = 526 ; free virtual = 2224
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2372.848 ; gain = 651.219 ; free physical = 313 ; free virtual = 6221
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -195,40 +220,46 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |BUFG   |     1|
-|2     |CARRY4 |     5|
-|3     |LUT1   |     1|
-|4     |LUT4   |     5|
-|5     |LUT5   |     1|
-|6     |LUT6   |     2|
-|7     |FDRE   |    21|
-|8     |IBUF   |     1|
-|9     |OBUF   |     3|
+|1     |BUFG   |     2|
+|2     |CARRY4 |    14|
+|3     |LUT1   |     3|
+|4     |LUT2   |     3|
+|5     |LUT3   |    31|
+|6     |LUT4   |    10|
+|7     |LUT5   |     3|
+|8     |LUT6   |     9|
+|9     |FDCE   |     1|
+|10    |FDPE   |     1|
+|11    |FDRE   |    63|
+|12    |FDSE   |     5|
+|13    |IBUF   |     2|
+|14    |OBUF   |     5|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2349.906 ; gain = 628.281 ; free physical = 526 ; free virtual = 2224
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2372.848 ; gain = 651.219 ; free physical = 313 ; free virtual = 6221
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2349.906 ; gain = 510.531 ; free physical = 526 ; free virtual = 2224
-Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2349.914 ; gain = 628.281 ; free physical = 526 ; free virtual = 2224
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2372.848 ; gain = 511.469 ; free physical = 305 ; free virtual = 6213
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2372.855 ; gain = 651.219 ; free physical = 308 ; free virtual = 6216
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2349.914 ; gain = 0.000 ; free physical = 526 ; free virtual = 2224
-INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2372.855 ; gain = 0.000 ; free physical = 306 ; free virtual = 6214
+INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 3 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2405.934 ; gain = 0.000 ; free physical = 856 ; free virtual = 2554
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2428.875 ; gain = 0.000 ; free physical = 635 ; free virtual = 6544
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: d268c49c
+Synth Design complete | Checksum: c56a641f
 INFO: [Common 17-83] Releasing license: Synthesis
-26 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+41 Infos, 3 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:29 . Memory (MB): peak = 2405.934 ; gain = 988.582 ; free physical = 856 ; free virtual = 2554
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1918.167; main = 1529.280; forked = 434.031
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3454.160; main = 2405.938; forked = 1104.250
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2429.945 ; gain = 0.000 ; free physical = 855 ; free virtual = 2554
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2428.875 ; gain = 1013.520 ; free physical = 635 ; free virtual = 6544
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1891.659; main = 1552.384; forked = 393.627
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3413.723; main = 2428.879; forked = 1040.871
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2452.887 ; gain = 0.000 ; free physical = 635 ; free virtual = 6544
 INFO: [Common 17-1381] The checkpoint '/home/asanka/Documents/Vivado/motor_controller/motor_controller.runs/synth_1/motor_controller.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file motor_controller_utilization_synth.rpt -pb motor_controller_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Jul 14 21:02:23 2024...
+INFO: [Common 17-206] Exiting Vivado at Thu Jul 18 05:44:18 2024...

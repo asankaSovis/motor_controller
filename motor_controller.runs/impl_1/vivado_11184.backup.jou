@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Sun Jul 14 21:02:42 2024
-# Process ID: 72941
+# Start of session at: Thu Jul 18 05:44:37 2024
+# Process ID: 11184
 # Current directory: /home/asanka/Documents/Vivado/motor_controller/motor_controller.runs/impl_1
 # Command line: vivado -log motor_controller.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source motor_controller.tcl -notrace
 # Log file: /home/asanka/Documents/Vivado/motor_controller/motor_controller.runs/impl_1/motor_controller.vdi
@@ -13,12 +13,12 @@
 # Platform          :Ubuntu
 # Operating System  :Ubuntu 24.04 LTS
 # Processor Detail  :Intel(R) Core(TM) i5-8300H CPU @ 2.30GHz
-# CPU Frequency     :3899.973 MHz
+# CPU Frequency     :3897.388 MHz
 # CPU Physical cores:4
 # CPU Logical cores :8
 # Host memory       :8157 MB
 # Swap memory       :4294 MB
 # Total Virtual     :12452 MB
-# Available Virtual :3952 MB
+# Available Virtual :8084 MB
 #-----------------------------------------------------------
 source motor_controller.tcl -notrace

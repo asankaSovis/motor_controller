@@ -57,9 +57,7 @@ if {$::dispatch::connected} {
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param checkpoint.writeSynthRtdsInDcp 1
-set_param chipscope.maxJobs 2
-set_param xicom.use_bs_reader 1
-set_param synth.incrementalSynthesisCache ./.Xil/Vivado-19767-asanka-Nitro-AN515-52/incrSyn
+set_param synth.incrementalSynthesisCache ./.Xil/Vivado-5427-asanka-Nitro-AN515-52/incrSyn
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
@@ -78,7 +76,11 @@ set_property ip_output_repo /home/asanka/Documents/Vivado/motor_controller/motor
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib /home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/sources_1/new/motor_controller.v
+read_verilog -library xil_defaultlib {
+  /home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/sources_1/imports/new/UART_Reciever.v
+  /home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/sources_1/imports/new/indicator.v
+  /home/asanka/Documents/Vivado/motor_controller/motor_controller.srcs/sources_1/new/motor_controller.v
+}
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

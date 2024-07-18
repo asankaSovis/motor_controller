@@ -19,16 +19,16 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
+module motor_controller(int_clk, drive_en, drive_dir, drive_step, din, green_LED, red_LED);
 
-module motor_controller(int_clk, drive_en, drive_dir, drive_step);
-
-    input int_clk;
-    output drive_en, drive_dir;
-    output drive_step;
+    input int_clk, din;
+    output drive_en, drive_dir, drive_step;
+    output green_LED, red_LED;
     
     wire drive_clk;
+    wire [8:0] rx_axgpio;
     
-    reg state, en, dir;
+    reg state, en, dir, receiving;
     
 	initial begin
 		state <= 1;
@@ -36,22 +36,26 @@ module motor_controller(int_clk, drive_en, drive_dir, drive_step);
 		dir <= 0;
 	end
     
-    drive_clock module1 (int_clk, state, drive_clk);
+    drive_clock module1 (int_clk, state, drive_clk, rx_axgpio[6:0]);
+    UART_Reciever module2 (int_clk, din, rx_axgpio, green_LED, red_LED, recieving);
     
     assign drive_step = drive_clk;
     assign drive_en = en;
-    assign drive_dir = dir;
+    assign drive_dir = rx_axgpio[7];
 
 endmodule
 
-module drive_clock (int_clk, run, drive_clk);
+module drive_clock (int_clk, run, drive_clk, rx_axgpio);
 	
 	input int_clk, run;
+	input [6:0] rx_axgpio;
 	output reg drive_clk;
 	
 	reg [19:0] counter;
+	reg [12:0] drive_speed_init = 13'b0_0000_0000_0000;
+	
 	// Drive Speed: b1111,1110,0000,0000,0000 >>> b0000,0010,0000,0000,0000
-	reg [19:0] drive_speed = 20'b0000_0010_0000_0000_0000;
+	wire [19:0] drive_speed;
 	
 	initial begin
 		counter <= 20'b0000_0000_0000_0000_0000;
@@ -73,5 +77,8 @@ module drive_clock (int_clk, run, drive_clk);
 		end
 	
 	end
+	
+	assign drive_speed[19:13] = rx_axgpio[6:0];
+	assign drive_speed[12:0] = drive_speed_init[12:0];
 
 endmodule

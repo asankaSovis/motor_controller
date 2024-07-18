@@ -109,8 +109,7 @@ set rc [catch {
   create_msg_db write_bitstream.pb
   set_param checkpoint.writeSynthRtdsInDcp 1
   set_param chipscope.maxJobs 2
-  set_param xicom.use_bs_reader 1
-  set_param synth.incrementalSynthesisCache ./.Xil/Vivado-19767-asanka-Nitro-AN515-52/incrSyn
+  set_param synth.incrementalSynthesisCache ./.Xil/Vivado-5427-asanka-Nitro-AN515-52/incrSyn
   set_param runs.launchOptions { -jobs 8  }
   open_checkpoint motor_controller_routed.dcp
   set_property webtalk.parent_dir /home/asanka/Documents/Vivado/motor_controller/motor_controller.cache/wt [current_project]
